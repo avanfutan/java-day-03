@@ -2,7 +2,6 @@ import model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class Task04 {
     private static List<Customer> loadCustomers() {
@@ -17,7 +16,6 @@ public class Task04 {
 
     public static void run() {
         List<Customer> customers = loadCustomers();
-
         for (Customer customer : customers) {
             String email = customer.getEmail().map(String::toUpperCase).orElse("Email Not Provided");
             System.out.println("Customer: " + customer.getName() + ", Email: " + email);
